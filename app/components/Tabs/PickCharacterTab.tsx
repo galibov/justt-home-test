@@ -20,7 +20,7 @@ export const PickCharacterTab: FC = () => {
                         <div className='text-center text-gray-400 font-light text-xl'>Search for a character ID in order to view a character</div>
                     </>
                 )}
-            {data && searchQuery !== '' && <CharacterCard character={data as Character} />}
+            {data && searchQuery && !error && <CharacterCard character={data as Character} />}
             </div>
         </div>
     );

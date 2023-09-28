@@ -15,16 +15,12 @@ export const BrowseTab: FC = () => {
         setQuery(searchQuery);
     };
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error loading data</p>;
-    if (!data) return null;
-
-    const characters = data.results as Character[];
-
     return (
-        <div>
+        <>
             <Search placeholder={'Browse for characters...'} onSearch={handleSearch} />
-            <Table characters={characters} />
-        </div>
+            {loading && <div className='bg-white text-center py-20'> <p>Loading...</p></div>}
+            {error && <div className='bg-white text-center py-20'><p>Error loading data</p>  </div>}
+            {data && !loading && !error && <Table characters={data.results as Character[]} />}
+        </>
     );
 };
