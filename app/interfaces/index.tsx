@@ -12,7 +12,3 @@ export interface Character {
     },
 
 }
-
-export interface CharactersResponse {
-    results: Character[];
-}

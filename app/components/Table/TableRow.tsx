@@ -6,7 +6,7 @@ interface TableRowProps {
 }
 export const TableRow: FC<TableRowProps> = ({ character }) => {
     return (
-        <tr className='even:bg-purple-50'>
+        <tr className='even:bg-indigo-50 odd:bg-white'>
             <th>{character.id}</th>
             <td>{character.name}</td>
             <td>{character.species}</td>
