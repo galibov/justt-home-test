@@ -28,7 +28,7 @@ export const Table: FC<TableProps> = ({ characters }) => {
 
   return (
       <div className="overflow-x-auto">
-        <table className="table">
+        <table className="min-w-full table-auto">
           {/* head */}
           <thead>
           <tr className='bg-indigo-950 text-white'>

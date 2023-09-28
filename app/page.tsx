@@ -9,7 +9,7 @@ export default function Home() {
     const [activeTab, setActiveTab] = useState('one');
 
     return (
-        <div className='flex flex-col justify-center items-center pb-20'>
+        <div className='flex flex-col justify-center items-center pb-20 relative'>
             <div className='w-full max-w-screen-lg 2xl:max-w-screen-2xl my-8'>
                 <Image className='mx-auto' height='200' width='200' src={'/logo.svg'} alt={'logo'}/>
             </div>

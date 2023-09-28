@@ -14,7 +14,7 @@ export const Search: FC<SearchProps> = ({ onSearch, placeholder }) => {
             <input
                 type="text"
                 placeholder={placeholder}
-                className="input input-bordered mr-4 bg-white w-1/4"
+                className="input input-bordered mr-4 bg-white sm:w-1/2 lg:w-1/4"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
             />

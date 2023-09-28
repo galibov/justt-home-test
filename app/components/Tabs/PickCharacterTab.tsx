@@ -9,9 +9,9 @@ export const PickCharacterTab: FC = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const { data, error, loading } = useFetch(searchQuery ? `https://rickandmortyapi.com/api/character/${searchQuery}` : '', {});
     return (
-        <div className='bg-white'>
+        <div className='bg-white '>
             <Search placeholder={'Search for character ID'} onSearch={setSearchQuery} />
-            <div className='flex flex-col justify-center items-center py-32'>
+            <div className='flex flex-col justify-center items-center py-10 lg:py-32'>
                 {loading && <p>Loading...</p>}
                 {error && <p>Error loading data</p>}
                 {!loading && !error && searchQuery === '' && (
