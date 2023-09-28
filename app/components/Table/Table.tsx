@@ -20,7 +20,6 @@ export const Table: FC<TableProps> = ({ characters }) => {
       }
     });
     setSortedCharacters(sorted);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sortDirection, characters]);
 
   const handleSort = () => {
@@ -33,7 +32,7 @@ export const Table: FC<TableProps> = ({ characters }) => {
           {/* head */}
           <thead>
           <tr className='bg-indigo-950 text-white'>
-            <th>
+            <th className='py-1'>
               I.d
               <button onClick={handleSort} className="btn btn-ghost">
                 <Image width={'8'} height={'8'} src={'/sort.svg'} alt={'sort'}/>
